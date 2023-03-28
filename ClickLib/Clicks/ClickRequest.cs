@@ -42,4 +42,12 @@ public sealed unsafe class ClickRequest : ClickBase<ClickRequest, AddonRequest>
     [ClickName("request_cancel")]
     public void Cancel()
         => this.ClickAddonButton(this.Addon->CancelButton, 1);
+
+    /// <summary>
+    /// Click the item in index 1.
+    /// </summary>
+    [ClickName("request_select_item1")]
+    public void SelectItem1()
+        => this.ClickAddonDragDrop(this.Addon->AtkComponentDragDrop250, 0xC);
+
 }
